@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray500: hsl(0, 0%, 42%);
+    --Gray950: hsl(0, 0%, 7%);
+}
+@font-face {
+    font-family: figtree;
+    src: url('./assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+}
+body {
+    font-family: figtree, sans-serif;
+
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Yellow);
+    min-height: 100vh;
+}
+
+.card-container {
+    background-color: var(--White);
+    width: 80%;
+    max-width: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--Gray950) ;
+    box-shadow: .5rem .5rem var(--Gray950);
+}
+.card-image {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.tag {
+    font-weight: 800;
+    background-color: var(--Yellow);
+    padding: .25rem .75rem;
+    border-radius: .25rem;
+    color: var(--Gray950);
+}
+.date {
+    margin: 1rem 0;
+    font-weight: 500;
+    color: var(--Gray950);
+}
+
+.title {
+    font-size: 1.375rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--Gray950);
+}
+.title:hover {
+    color: var(--Yellow);
+    cursor: pointer;
+}
+.details {
+    color: var(--Gray500);
+}
+.profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+.profile-image {
+    width: 40px;
+}
+.name {
+    font-weight: 800;
+}
+
+.attribution {
+    margin-top: 1rem;
+    text-align: center;
+}
+.attribution a:hover, 
+.attribution a:visited,
+.attribution a:focus {
+    color: var(--Gray950);
+    cursor: pointer;
+}
+
+
+/* so it doesn't look weird on smaller screen 
+though it highly unlikely to be viewed on a 
+screen less than 450px in width*/
+@media screen and (max-width: 28.125rem) {
+    .card-container {
+        width: 90%;
+        max-width: 18.75rem;
+        padding: .75rem;
+    }
+    .tag,
+    .date,
+    .attribution,
+    .attribution a {
+        font-size: .875rem;
+    }
+    .title {
+        font-size: 1.125rem;
+    }
+    .details {
+        font-size: .85rem;
+    }
+    .profile-image {
+        width: 30px;
+    }
+    .name {
+        font-size: .85rem;
+    }
+}

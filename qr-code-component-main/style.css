@@ -14,7 +14,7 @@
 }
 @font-face {
     font-family: outfit;
-    src: url('/qr-code-component-main/fonts/static/Outfit-Regular.ttf') format(truetype);
+    src: url('/qr-code-component-main/fonts/static/Outfit-Regular.ttf') format('truetype');
 }
 
 .wrapper {
@@ -61,6 +61,8 @@ body {
 .attribution a:hover, 
 .attribution a:visited {
     color: var(--slate900);
+    cursor: pointer;
+
 }
 
 /* so it doesn't look weird on smaller screen 
