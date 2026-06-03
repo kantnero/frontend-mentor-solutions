@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+
+--Blue-500: hsl(215, 51%, 70%);
+--Cyan-400: hsl(178, 100%, 50%);
+--main-bg: hsl(217, 54%, 11%);
+--card-bg: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+@font-face {
+    font-family: outfit;
+    src: url('./fonts/static/Outfit-Regular.ttf') format('truetype');
+}
+body {
+    font-size: 18px;
+    font-family: outfit, sans-serif;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--main-bg);
+}
+.card-container {
+    background-color: var(--card-bg);
+    width: 80%;
+    max-width: 20rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.card-container img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 10px;
+}
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--Cyan-400);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.image-wrapper:hover::after {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.card-container h1 {
+    color: var(--White);
+    font-size: 22px;
+    margin: 1rem 0;
+}
+.card-container h1:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+.card-container p {
+    color: var(--Blue-500);
+    margin-bottom: 1rem;
+}
+.currency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.currency p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+.currency p:nth-child(1) span {
+    font-weight: 600;
+}
+.currency p:nth-child(1) span:hover {
+    color: var(--Cyan-400);
+    cursor: pointer;
+}
+.line {
+    display: block;
+    border-top: 1.75px solid var(--line) ;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.profile img {
+    width: 50px;
+}
+.profile p:hover {
+    cursor: pointer;
+    color: var(--Cyan-400);
+}
+footer {
+    margin-top: 1.75rem;
+    color: var(--Blue-500);
+}
+
+footer a {
+    color: var(--White);
+}
