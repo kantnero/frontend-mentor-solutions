@@ -1,5 +1,5 @@
 # frontend-mentor-solutions
-My solutions to [Frontend Mentor challenges] (https://www.frontendmentor.io/challenges), focusing on clean UI, best practices, and matching the provided designs as closely as possible. 
+My solutions to [Frontend Mentor challenges](https://www.frontendmentor.io/challenges), focusing on clean UI, best practices, and matching the provided designs as closely as possible. 
 
 
 ## Structure
@@ -25,5 +25,3 @@ This repository serves as:
 ## Feedback
 
 Suggestions and improvements are always welcome.
-https://t.me/kantnero
-
